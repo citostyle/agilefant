@@ -1,0 +1,17 @@
+db:
+#    image: mariadb:latest
+    image: mysql:latest
+    environment:
+    - MYSQL_ROOT_PASSWORD=foobar
+    - MYSQL_DATABASE=agilefant
+    - MYSQL_USER=agilefant
+    - MYSQL_PASSWORD=my-secret
+
+app:
+    image: jcito/agilefant
+    volumes:
+        - ./metrics/:/tmp/
+    ports:
+        - "8080:8080"
+    links:
+        - "db:db"
