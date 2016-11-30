@@ -66,8 +66,17 @@
 	</modules>
 
 	<dependencyManagement>
-		<dependencies>
-			<dependency>
+            <dependencies>
+
+
+                <dependency>
+                  <groupId>net.kieker-monitoring</groupId>
+                  <artifactId>kieker</artifactId>
+                  <version>1.12</version>
+                  <classifier>aspectj</classifier>
+                </dependency>
+
+               			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
 				<version>${logback.version}</version>
